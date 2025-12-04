@@ -16,13 +16,22 @@ public class ConsoleApp
         int credits = Convert.ToInt32(input.AskForInfo("How many credits does the course have?"));
 
         string grade = input.AskForInfo($"What is your grade on {course}?");
+
+
+        var student1 = new Student("Lyra", 20, 9875, "Law");
+        var subject1 = new Subject("Criminal Law", "LAW1203", 15);
+        var grades1 = new Grades(student1, subject1, "B");
         
+        var student2 = new Student(name, age, id, program);
+        var subject2 = new Subject(course, courseCode, credits);
+        var grades2 = new Grades(student2, subject2, grade);
         
-        var student = new Student(name, age, id, program);
-        var subject = new Subject(course, courseCode, credits);
-        var grades = new Grades(student, subject, grade);
-        student.PrintInfo();
-        subject.PrintInfo();
-        grades.PrintInfo();
+        student1.PrintInfo();
+        subject1.PrintInfo();
+        grades1.PrintInfo();
+        
+        student2.PrintInfo();
+        subject2.PrintInfo();
+        grades2.PrintInfo();
     }
 }
