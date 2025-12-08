@@ -6,6 +6,7 @@ public class Subject
     public string CourseCode { get; set; }
     public int Credits { get; set; }
     
+    
     public Subject(string course, string courseCode, int credits)
     {
         Course = course;
