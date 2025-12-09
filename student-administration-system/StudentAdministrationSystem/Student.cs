@@ -17,6 +17,16 @@ public class Student
         StudentId = studentId;
         DegreeProgram = degreeProgram;
     }
+    
+    public Student(string name, int age, int studentId, string degreeProgram, List<Subject> subjects, List<Grades> grades)
+    {
+        Name = name;
+        Age = age;
+        StudentId = studentId;
+        DegreeProgram = degreeProgram;
+        Subjects = subjects;
+        Grades = grades;
+    }
 
     public void PrintInfo()
     {
