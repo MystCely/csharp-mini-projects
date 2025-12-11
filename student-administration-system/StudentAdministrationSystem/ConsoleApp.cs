@@ -48,37 +48,23 @@ public class ConsoleApp
             });
         
         
-        // Print Student 1 info
-        Console.WriteLine("\n=== Student 1 ===");
-        
-        student1.PrintInfo();
-        
-        foreach (var studentGrade in student1.Grades)
+        // Print Student Info
+        var students = new List<Student> {student1, student2};
+        foreach (var student in students)
         {
-            studentGrade.PrintInfo();
-        }
+            student.PrintInfo();
 
-        double avg1 = student1.CalculateAvgGrade();
-        int credits1 = student1.CalculateTotalCredits();
-        
-        Console.WriteLine($"\nAverage Grade: {avg1:F1}");
-        Console.WriteLine($"Total Credits: {credits1}");
+            foreach (var studentGrade in student.Grades)
+            {
+                studentGrade.PrintInfo();
+            }
 
-        
-        // Print Student 2 info
-        Console.WriteLine("\n=== Student 2 ===");
-
-        student2.PrintInfo();
-        
-        foreach (var studentGrade in student2.Grades)
-        {
-            studentGrade.PrintInfo();
+            double avg = student.CalculateAvgGrade();
+            int credits = student.CalculateTotalCredits();
+            
+            Console.WriteLine($"\nAverage Grade: {avg:F1}");
+            Console.WriteLine($"Total Credits: {credits}");
         }
         
-        double avg2 = student2.CalculateAvgGrade();
-        int credits2 = student2.CalculateTotalCredits();
-        
-        Console.WriteLine($"\nAverage Grade: {avg2:F1}");
-        Console.WriteLine($"Total Credits: {credits2}");
     }
 }
