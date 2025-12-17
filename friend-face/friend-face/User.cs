@@ -2,10 +2,10 @@ namespace FriendFace;
 
 public class User
 {
-    public string Username { get; set; }
-    public int Age { get; set; }
-    public string Bio { get; set; }
-    public List<User> Friends { get; private set; }
+    public string Username { get; }
+    public int Age { get; }
+    public string Bio { get; }
+    public List<User> Friends { get; }
 
     public User(string username, int age, string bio)
     {

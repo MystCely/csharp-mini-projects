@@ -22,7 +22,7 @@ public class ConsoleApp
             new User("Cole", 17, "I love gaming in my free time."),
             new User("Leandro", 25, "Looking for my soulmate."),
             new User("Audrey", 24, "Men are disgusting."),
-            new User("Rebecka", 45, "I can't wait until my family visits me during the holidays!"),
+            new User("Marylin", 45, "I can't wait until my family visits me during the holidays!"),
         };
 
         bool running = true;
